@@ -23,6 +23,8 @@ module.exports = async (req, res) => {
         return arg.elements.map(arrayElement => arrayElement.value);
       }
     });
+    
+  res.setHeader("Access-Control-Allow-Origin", "*");
 
   return {
     cards: parsedArgs.slice(0, 16),
