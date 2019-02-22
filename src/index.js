@@ -9,7 +9,7 @@ module.exports = async (req, res) => {
   const pageResponse = await fetch(`http://www.puzzgrid.com/grid/${gridId}`);
   const pageHtml = await pageResponse.text();
 
-  const functionCallString =  pageHtml.split('\n')[12];
+  const functionCallString =  pageHtml.split('\n')[13];
 
   const ast = acorn.parse(functionCallString);
 
